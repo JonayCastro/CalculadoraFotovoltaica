@@ -1,0 +1,17 @@
+<h2 class="title-section">Calculo potencia pico<i class="fas fa-caret-up"></i></h2>
+<div class="container-potencia-pico seccion">
+    <div class="container-formula">
+        <h3 class="title-formula">F&oacute;rmula Potencia Pico</h3>
+        <img src="imgs/f_pPico.png" id="img-f-pico" alt="Fórmula calculo potencia pico" title="Fórmula Potencia Pico" class="formula">
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Horas Sol Pico (HSP)</p>
+        <input type="number" name="hspValue" id="hsp-1" class="hsp-item valor-formula" value="4" min="0"><label for="hsp-1"> Establesca el valor (h)</label>
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Rendimiento de los paneles</p>
+        <input type="radio" name="rpValue" id="rp-1" value="{{rp1}}" class="rp-item valor-formula" checked><label for="rp-1">{{rp1}} Por defecto</label><br>
+        <input type="radio" name="rpValue" id="rp-2" class="rp-item valor-formula"><label for="rp-2">Escribir un valor:</label>
+        <input type="number" name="rpValue" id="rp-2-1" value="0" class="valor-formula" min="0" step=".1" disabled>
+    </div>
+</div>

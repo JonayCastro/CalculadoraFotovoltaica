@@ -1,0 +1,19 @@
+<h2 class="title-section">Capacidad Nominal de las bater&iacute;as<i class="fas fa-caret-up"></i></h2>
+<div class="container-capacidad-nom-bat seccion">
+    <div class="container-formula">
+        <h3 class="title-formula">F&oacute;rmula Capacidad Nominal Bater&iacute;as</h3>
+        <img src="imgs/f_cnbat.png" alt="Fórmula cálculo capacidad nominal de las baterías" title="Fórmula capacidad nominal" id="img-f-capacidadnom" class="formula">
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Temperatura M&eacute;dia (ºC)</p>
+        <input type="radio" name="tempMediaValue" id="tempMed-1" value="{{tempMed1}}" class="temp-item valor-formula" checked><label for="tempMed-1">Temperatura Media en invierno 20ºC o mas</label><br>
+        <input type="radio" name="tempMediaValue" id="tempMed-2" class="temp-item valor-formula"><label for="tempMed-2">Temperatura Media en invierno menos de 20ºC</label><br>
+        <input type="number" name="tempMediaValue" id="tempMed-2-1" value="0" class="valor-formula" min="0" step=".1" disabled><label for="tempMed-2-1">Escribir valor temperatura media en invierno</label>
+    </div>
+    <div class="container-formula oculto" id="correct-tem">
+        <h3 class="title-formula">F&oacute;rmula Capacidad Nominal Correci&oacute;n Temperatura</h3>
+        <img src="imgs/f_cntembat.png" alt="Fórmula capacidad nominal correción temperatura" title="Fórmula capacidad nominal correción temperatura" id="img-f-cnt" class="formula">
+        <h3 class="title-formula">F&oacute;rmula Coeficiente kt</h3>
+        <img src="imgs/f_kttembat.png" alt="Fórmula coeficiente kt" title="Fórmula coeficiente kt" id="img-f-kt" class="formula">
+    </div>
+</div>

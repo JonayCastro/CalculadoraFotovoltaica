@@ -1,0 +1,48 @@
+<h2 class="title-section">C&aacute;lculo Rendimiento <i class="fas fa-caret-up"></i></h2>
+<div class="container-rendimiento seccion">
+    <div class="container-formula">            
+        <h3 class="title-formula">F&oacute;rmula Rendimiento</h3>
+        <img src="imgs/f_rendimiento.png" id="img-f-rendimiento" class="formula" alt="Fórmula de calculo rendimiento" title="Fórmula Rendimiento">
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Coeficiente p&eacute;rdidas en baterias (kb)</p>
+        <input type="radio" name="kbValue" id="kb-1" value="{{kb1}}" class="kb-item valor-formula"><label for="kb-1"> {{kb1}} Descargas intensas en cortos periodos de tiempo</label><br>
+        <input type="radio" name="kbValue" id="kb-2" value="{{kb2}}" class="kb-item valor-formula" checked><label for="kb-2"> {{kb2}} Descargas moderadas en largos periodos de tiempo</label>
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Coeficiente por autodescargas de la bateria (ka)</p>
+        <input type="radio" name="kaValue" id="ka-1" value="{{ka1}}" class="ka-item valor-formula"><label for="ka-1"> {{ka1}} Ni-Cd (Niquel Cadmio)</label><br>
+        <input type="radio" name="kaValue" id="ka-2" value="{{ka2}}" class="ka-item valor-formula" checked><label for="ka-2"> {{ka2}} Pb-Ac (Plomo &Aacute;cido)</label><br>
+        <input type="radio" name="kaValue" id="ka-3" value="{{ka3}}" class="ka-item valor-formula"><label for="ka-3"> {{ka3}} Bater&iacute;as de alta auto descarga (CoCHC)</label>
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Coeficiente por rendimiento del regulador (kr)</p>
+        <input type="radio" name="krValue" id="kr-1" value="{{kr1}}" class="kr-item valor-formula" checked><label for="kr-1">{{kr1}} Rendimiento del 90%</label><br>
+        <input type="radio" name="krValue" id="kr-2" value="{{kr2}}" class="kr-item valor-formula"><label for="kr-2">{{kr2}} Rendimiento del 99%</label><br>
+        <input type="radio" name="krValue" id="kr-3" class="kr-item valor-formula"><label for="kr-3">Escribir un valor:</label>
+        <input type="number" name="krValue" id="kr-3-1" value="0" class="valor-formula" min="0" step=".01" disabled>
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Coeficiente perdidas del inversor (kc)</p>
+        <input type="radio" name="kcValue" id="kc-1" value="{{kc1}}" class="kc-item valor-formula" checked><label for="kc-1">{{kc1}} Onda senoidal pura</label><br>
+        <input type="radio" name="kcValue" id="kc-2" value="{{kc2}}" class="kc-item valor-formula"><label for="kc-2">{{kc2}} Onda senoidal</label><br>
+        <input type="radio" name="kcValue" id="kc-3" value="{{kc3}}" class="kc-item valor-formula"><label for="kc-3">{{kc3}} Onda cuadrada</label><br>
+        <input type="radio" name="kcValue" id="kc-4" class="kc-item valor-formula"><label for="kc-4">Escribir un valor:</label>
+        <input type="number" name="kcValue" id="kc-4-1" value="0" class="valor-formula" min="0" step=".01" disabled>
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Coeficiente perdidas varias (kv)</p>
+        <input type="radio" name="kvValue" id="kv-1" value="{{kv1}}" class="kv-item valor-formula" checked><label for="kv-1">{{kv1}} Valor por seguridad</label><br>
+        <input type="radio" name="kvValue" id="kv-2" class="kv-item valor-formula"><label for="kv-2">Escribir un valor:</label>
+        <input type="number" name="kvValue" id="kv-2-1" value="0" class="valor-formula" min="0" step=".01" disabled>
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Coeficiente profundidad descarga de bater&iacute;as (Pd)</p>
+        <input type="radio" name="pdValue" id="pd-1" value="{{pd1}}" class="pd-item valor-formula" checked><label for="pd-1">{{pd1}} (50%) Bater&iacute;as de vaso (2V cada una)</label><br>
+        <input type="radio" name="pdValue" id="pd-2" value="{{pd2}}" class="pd-item valor-formula"><label for="pd-2">{{pd2}} (80%) Resto de bater&iacute;as</label>
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">N&uacute;mero de d&iacute;as de autonom&iacute;a sin sol (N)</p>
+        <input type="range" name="nDaysValue" id="nDays" class="nDays-item valor-formula" value="4" min="1" max="10" step="1"><label id="label-nDays" for="nDays">4</label>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+@import url(generales.css);
+
+/* ---Seccion consumo--- */
+.container-consumos{
+    margin-bottom: 20px;
+}
+.btn-ctrl-rows{
+    width: 40px;
+    height:40px;
+    font-size: 1.2em;
+    font-style: bold;
+    background-color: var(--btn-color);
+    border: none;
+    cursor: pointer;
+}
+.btn-ctrl-rows:hover{
+    background-color: var(--btn-hover-color);
+    box-shadow: 1px 1px black;
+}
+#tabla-consumos{
+    width: 100%;
+    text-align: left;
+}
+#tabla-consumos td{
+    text-align: center;
+}
+#tabla-consumos input,select{
+    width: 95%;
+    border: none;
+    background-color: var(--background-color-body);
+    font-size: 1.2em;
+}
+#tabla-consumos input[type=number]{
+    text-align: center;
+}
+#tabla-consumos input:focus,select:focus{
+    outline:none;
+    outline-width: 0;
+    box-shadow: none;
+    background-color: var(--section-title-back-color);
+    color: var(--section-title-border-color);
+}
+#tabla-consumos input:focus::placeholder{
+    color: var(--section-title-border-color);
+}
+#tabla-consumos th{
+    background-color: var(--table-head-color);
+    font-size: 1.2em;
+    padding: 10px;
+}
+#container-btn-rows{
+    margin-top: 2vh;
+}
+/* -------------------------- */
+/* ---Seccion rendimiento --- */
+.container-item-formula{
+    width: 90%;
+    margin: auto;
+    padding:20px;
+    border: 2px solid var(--border-color);
+    margin-bottom: 5px;
+}
+.name-item{
+    background-color: var(--table-head-color);
+    padding: 10px;
+}
+.valor-formula{
+    margin-left: 10px;
+}
+/* -------------------------- */
+/* ----Imagenes formulas---- */
+
+/* #img-f-rendimiento{
+    width: 350px;
+	height: 100px;
+}
+#img-f-serie, #img-f-paralelo, #img-f-ptotales, #img-f-pico, #img-f-energia, #img-f-capacidadutil, #img-f-capacidadnom, #img-f-energia-total{
+    width: 150px;
+    height: 100px;
+} */
+/* ------------------------ */
+/* Seccion capacidad nominal */
+
+/* ------------------------ */

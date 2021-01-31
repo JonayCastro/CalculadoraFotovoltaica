@@ -1,0 +1,15 @@
+<h2 class="title-section">Calculo Energ&iacute;a Total<i class="fas fa-caret-up"></i></h2>
+<div class="container-energia seccion">
+    <div class="container-formula">
+        <h3 class="title-formula">F&oacute;rmula Energia Total</h3>
+        <img src="imgs/f_etotalca.png" id="img-f-energia-total" alt="Fórmula calculo de energía total" title="Fórmula Energía" class="formula">
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Coeficiente perdidas del inversor (kc)</p>
+        <input type="radio" name="kcMixtoValue" id="kcmix-1" value="{{kc1}}" class="kcmix-item valor-formula" checked disabled><label for="kcmix-1">{{kc1}} Onda senoidal pura</label><br>
+        <input type="radio" name="kcMixtoValue" id="kcmix-2" value="{{kc2}}" class="kcmix-item valor-formula" disabled><label for="kcmix-2">{{kc2}} Onda senoidal</label><br>
+        <input type="radio" name="kcMixtoValue" id="kcmix-3" value="{{kc3}}" class="kcmix-item valor-formula" disabled><label for="kcmix-3">{{kc3}} Onda cuadrada</label><br>
+        <input type="radio" name="kcMixtoValue" id="kcmix-4" class="kcmix-item valor-formula" disabled><label for="kcmix-4">Escribir un valor:</label>
+        <input type="number" name="kcMixtoValue" id="kcmix-4-1" value="0" class="valor-formula" min="0" step=".01" disabled>
+    </div>
+</div>

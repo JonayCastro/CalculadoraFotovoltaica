@@ -1,0 +1,18 @@
+<h2 class="title-section">N&uacute;mero de paneles en serie<i class="fas fa-caret-up"></i></h2>
+<div class="container-panel-serie seccion">
+    <div class="container-formula">
+        <h3 class="title-formula">F&oacute;rmula n&uacute;mero paneles en serie</h3>
+        <img src="imgs/f_panelserie.png" id="img-f-serie" alt="Fórmula calculo número paneles en serie" title="Número paneles serie" class="formula">
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Tensi&oacute;n nominal del sistema (V<sub>ns</sub>)</p>
+        <input type="radio" name="tnsValue" id="tns1" value="{{tns1}}" class="tns-item valor-formula" checked><label for="tns1"> {{tns1}} V (Potencia &lt;=1000W)</label><br>
+        <input type="radio" name="tnsValue" id="tns2" value="{{tns2}}" class="tns-item valor-formula"><label for="tns2"> {{tns2}} V (1000W &lt;= Potencia &lt;= 2500W)</label><br>
+        <input type="radio" name="tnsValue" id="tns3" value="{{tns3}}" class="tns-item valor-formula"><label for="tns3"> {{tns3}} V (2500W &lt;= Potencia &lt;= 5000W)</label><br>
+        <input type="radio" name="tnsValue" id="tns4" value="{{tns4}}" class="tns-item valor-formula"><label for="tns4"> {{tns4}} V (Potencia &gt;= 5000W)</label>
+    </div>
+    <div class="container-item-formula">
+        <p class="name-item">Tensi&oacute;n nominal del panel (V<sub>np</sub>)</p>
+        <input type="number" name="tnPanelValue" id="tnp" min="1" step=".1" value="12" class="tnp-item valor-formula"><label for="tnp"> (V)</label>
+    </div>
+</div>

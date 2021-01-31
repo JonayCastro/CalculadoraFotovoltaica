@@ -1,0 +1,92 @@
+:root{
+	/*fuentes*/
+	--font-principal:'Roboto', sans-serif;
+	/*colores*/
+	--background-color-body:#f0f9ffc0;
+	--background-color-aside:#A7DCF0;
+	--btn-color: #F88D1B;
+	--btn-hover-color: #E68A00;
+	--second-font-color: #F6F8EF;
+	--section-title-back-color: #433E45;
+	--section-title-border-color: #EBE4D1;
+	--table-head-color: #4CAF50;
+	--border-color: #373E46;
+	--input-border-color:#FF4081;
+}
+@keyframes loading {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+body{
+	font-family: var(--font-principal);
+	background-color: var(--background-color-body);
+}
+#container-menu{
+	padding: 20px;
+	float: right;
+	display: grid;
+	place-items: end;
+}
+#container-header{
+	height: 100px;
+	z-index: -1;
+}
+#menu{
+	padding: 10px;
+}
+#principal-title{
+	padding: 20px;	
+}
+#container-principal{
+	margin-left:325px;
+	margin-right: 20px;
+	margin-bottom: 200px;
+}
+#menu-lateral{
+	background-color: var(--background-color-aside);
+	height: 450px;
+	width: 300px;
+	margin-left: 20px;
+	overflow: auto;
+}
+.btn-menu{
+	margin-bottom: 10px;
+}
+.title-totales{
+	background-color: var(--section-title-back-color);
+	color: var(--second-font-color);
+	padding: 10px;
+	margin-top: 0;
+}
+.total-item{
+	margin-left: 10px;
+}
+.container-section{
+	width: 100%;
+}
+.title-section{
+	background-color: var(--section-title-back-color);
+	color: var(--second-font-color);
+	width: 100%;
+	padding: 10px;
+}
+.fas{
+	cursor: pointer;
+}
+.formula{
+	margin-left: 20px;
+}
+.container-formula{
+	margin-left: 40px;
+}
+.clientDatIn{
+	margin-bottom: 20px;
+	width: 100%;
+}
+.oculto{
+	display: none;
+}
+.btn{
+	cursor: pointer;
+}
+
