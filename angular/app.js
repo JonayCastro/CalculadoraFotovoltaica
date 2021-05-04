@@ -5,8 +5,4 @@ angular.module('angularApp', ['ngRoute'])
 			controller:'dataController',
 			templateUrl: 'templates/home.html'
 		});
-	}]);
-
-
-		
-	
+	}]);	
