@@ -7,16 +7,15 @@
 	<meta name="author" content="Jonay Zevenzui Castro Suárez"/>
 	<meta name="copyright" content="Propiedad de Jonay Zevenzui Castro Suárez"/>
 	<meta name="robots" content="index"/>
-	<title>Calculadora Fotovolt&aacute;ica</title>
+	<title>Calculadora Fotovoltáica</title>
 	<!-- Bootstrap 4 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 	<!-- Icons -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<!-- Hojas de Estilo -->
 	<link rel="stylesheet" href="styles/generales.css">
 	<link rel="stylesheet" href="styles/install-data.css">
-	<!-- Evitar Fallo Icon -->
-	<link rel="shortcut icon" href="#" />
+	<link rel="stylesheet" href="styles/media-querys.css">
 	<!-- Fuentes google -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<!-- Angular -->
@@ -30,23 +29,20 @@
 	<script src="jquery/general.js"></script>
 	<script src="jquery/install-data.js"></script>
 	<script src="jquery/export-proyect.js"></script>
-	<!-- jsPDF -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
-	<!-- Auto Table -->
-	<script src="https://unpkg.com/jspdf-autotable"></script>
 </head>
 <body>
 	<div id="container-header">
+		<h1 id="principal-title">Calculadora Fotovoltáica</h1>
 		<div id="container-menu">
-			<button id="btn-ctrl-menu" class="btn">Menú;</button>
+			<button id="btn-ctrl-menu" class="btn">Menú</button>
 			<div id="menu" class="oculto">
-				<button id="bnt-expand" class="btn-menu btn">Cerrar todo</button><br>
-				<button id="btn-export" class="btn">Exportar proyecto a pdf</button>
+				<button id="bnt-expand" class="btn-menu btn">Cerrar todo</button>
+				<button id="btn-export" class="btn">Imprimir</button>
 			</div>
 		</div>
-		<h1 id="principal-title">Calculadora Fotovoltáica</h1>
 	</div>
-	<div ng-include="'templates/menu-lateral.html'"></div>
-	<div ng-view></div>
+	<main id="main-container">
+		<div id="container-principal" ng-view></div>
+	</main>
 </body>
 </html>

@@ -1,6 +1,5 @@
 @import url(generales.css);
 
-/* ---Seccion consumo--- */
 .container-consumos{
     margin-bottom: 20px;
 }
@@ -51,8 +50,6 @@
 #container-btn-rows{
     margin-top: 2vh;
 }
-/* -------------------------- */
-/* ---Seccion rendimiento --- */
 .container-item-formula{
     width: 90%;
     margin: auto;
@@ -67,18 +64,3 @@
 .valor-formula{
     margin-left: 10px;
 }
-/* -------------------------- */
-/* ----Imagenes formulas---- */
-
-/* #img-f-rendimiento{
-    width: 350px;
-	height: 100px;
-}
-#img-f-serie, #img-f-paralelo, #img-f-ptotales, #img-f-pico, #img-f-energia, #img-f-capacidadutil, #img-f-capacidadnom, #img-f-energia-total{
-    width: 150px;
-    height: 100px;
-} */
-/* ------------------------ */
-/* Seccion capacidad nominal */
-
-/* ------------------------ */

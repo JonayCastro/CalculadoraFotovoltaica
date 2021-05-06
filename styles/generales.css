@@ -13,40 +13,33 @@
 	--border-color: #373E46;
 	--input-border-color:#FF4081;
 }
-@keyframes loading {
-	from {opacity: 1;}
-	to {opacity: 0;}
+*{
+	box-sizing: border-box;
 }
 body{
 	font-family: var(--font-principal);
-	background-color: var(--background-color-body);
-}
-#container-menu{
-	padding: 20px;
-	float: right;
-	display: grid;
-	place-items: end;
+	font-size: 1em;
 }
 #container-header{
-	height: 100px;
-	z-index: -1;
+	height: 200px;
 }
 #menu{
 	padding: 10px;
 }
 #principal-title{
-	padding: 20px;	
+	font-size: 4rem;
+}
+#main-container{
+	display: flex;
 }
 #container-principal{
-	margin-left:325px;
-	margin-right: 20px;
-	margin-bottom: 200px;
+	flex: 6;
 }
 #menu-lateral{
 	background-color: var(--background-color-aside);
-	height: 450px;
-	width: 300px;
-	margin-left: 20px;
+	height: 500px;
+	flex: 2;
+	
 	overflow: auto;
 }
 .btn-menu{

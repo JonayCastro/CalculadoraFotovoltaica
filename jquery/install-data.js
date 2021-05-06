@@ -233,9 +233,11 @@ $(document).ready(function(){
             .val('')
             .on('keyup change', function(){
                 tempMed = Number($(this).val());
+                $('#tMedValue').text(tempMed);
                 calculos();
             });
         }
+        $('#tMedValue').text(tempMed);
         calculos();
     }
     

@@ -23,5 +23,4 @@ $(document).ready(function(){
         }
         $('.fas').toggleClass('fa-caret-up').toggleClass('fa-caret-down');
     });
-
 });
