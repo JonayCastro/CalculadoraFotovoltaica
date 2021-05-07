@@ -1,4 +1,45 @@
-@media screen and (max-device-width: 800px)
+@media print
 {
+    .only-print{
+        display: block;
+    }
+    .clientDatIn{
+        border:none;
+        font-size: 1.5rem;
+    }
+    .clientDatIn::placeholder{
+        opacity: 0;
+    }
+    .no-print, .fas{
+        display: none;
+    }
+    a:link, a:active, a:visited{
+        text-decoration: none;
+        color: black;
+    }
+    .title-section{
+        color: black;
+    }
+    table, td, th{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    #tabla-consumos .datosConsum::placeholder{
+        opacity: 0;
+    }
+    .container-datos-cliente{
+        display: flex;
+    }
+    .container-datos-cliente .col{
+        flex: 1;
+    }
+    #container-consumos-totales{
+        display: flex;
+        break-inside: avoid;
+    }
+    #container-consumos-totales .col{
+        flex: 1;
+    }
+    
     
 }

@@ -7,7 +7,20 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop:$(this).offset().top
         },500);
+
     });
+
+    
+    /* var now = new Date();
+
+    var day = ("0" + now.getDate()).slice(-2);
+    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+    var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+
+    $('#in-date').val(today); */
+    /* var d = document.getElementById('in-date');
+    d.valueAsDate = new Date(); */
 
     $(document).on('click', '#btn-ctrl-menu', function(){
         $('#menu').slideToggle(500).toggleClass('oculto');

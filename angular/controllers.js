@@ -1,5 +1,8 @@
 angular.module('angularApp')
-    .controller('dataController',['$scope', function(s){
+    .run(['$anchorScroll', function($anchorScroll) {
+        $anchorScroll.yOffset = 20;
+    }])
+    .controller('dataController',['$scope', '$location', '$anchorScroll', function(s,l,a){
         s.kb1 = 0.1;
         s.kb2 = 0.05;
         s.ka1 = 0.02;
@@ -20,4 +23,20 @@ angular.module('angularApp')
         s.tns4 = 120;
         s.tempMed1 = 20;
 
+        s.goToAnchor = (n)=>{
+            var newHash = n;
+            if (l.hash() !== newHash) {
+                l.hash(n);
+            } else {
+                a();
+            }
+        }
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('#btn-top').fadeIn();
+            } else {
+                $('#btn-top').fadeOut();
+            }
+        });
     }]);
