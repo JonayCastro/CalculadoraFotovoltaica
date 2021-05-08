@@ -7,21 +7,13 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop:$(this).offset().top
         },500);
-
     });
 
+    $(document).on('click', '#in-date', function(){
+        let today = new Date().toISOString().substr(0,10);
+        $(this).val(today);
+    })
     
-    /* var now = new Date();
-
-    var day = ("0" + now.getDate()).slice(-2);
-    var month = ("0" + (now.getMonth() + 1)).slice(-2);
-
-    var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
-
-    $('#in-date').val(today); */
-    /* var d = document.getElementById('in-date');
-    d.valueAsDate = new Date(); */
-
     $(document).on('click', '#btn-ctrl-menu', function(){
         $('#menu').slideToggle(500).toggleClass('oculto');
     });
@@ -35,5 +27,17 @@ $(document).ready(function(){
             e.target.innerHTML = 'Cerrar todo';
         }
         $('.fas').toggleClass('fa-caret-up').toggleClass('fa-caret-down');
+    });
+
+    $(document).on('click', '#btn-export', function(){
+        window.print();
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('#btn-top').fadeIn();
+        } else {
+            $('#btn-top').fadeOut();
+        }
     });
 });

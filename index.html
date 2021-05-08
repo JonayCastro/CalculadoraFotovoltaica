@@ -16,17 +16,13 @@
 	<link rel="stylesheet" href="styles/media-querys.css">
 	<!-- Fuentes google -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-	<!-- Angular -->
+	<!-- AngularJS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
-	<script src="angular/app.js"></script>
 	<script src="angular/controllers.js"></script>
-	<!-- Ng-Route -->
-	<script src="https://code.angularjs.org/1.8.0/angular-route.min.js"></script>
 	<!-- Jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="jquery/general.js"></script>
 	<script src="jquery/install-data.js"></script>
-	<script src="jquery/export-proyect.js"></script>
 </head>
 <body>
 	<div id="container-header" class="no-print">
@@ -40,7 +36,7 @@
 		</div>
 	</div>
 	<main id="main-container">
-		<div id="container-principal" ng-view></div>
+		<div id="container-principal" ng-include="'templates/home.html'"></div>
 	</main>
 </body>
 </html>

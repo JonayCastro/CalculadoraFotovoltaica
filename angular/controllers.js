@@ -1,4 +1,4 @@
-angular.module('angularApp')
+angular.module('angularApp',[])
     .run(['$anchorScroll', function($anchorScroll) {
         $anchorScroll.yOffset = 20;
     }])
@@ -31,12 +31,4 @@ angular.module('angularApp')
                 a();
             }
         }
-
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 300) {
-                $('#btn-top').fadeIn();
-            } else {
-                $('#btn-top').fadeOut();
-            }
-        });
     }]);

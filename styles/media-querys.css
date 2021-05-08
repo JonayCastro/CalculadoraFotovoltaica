@@ -29,17 +29,7 @@
     }
     .container-datos-cliente{
         display: flex;
+        justify-content: space-around;
     }
-    .container-datos-cliente .col{
-        flex: 1;
-    }
-    #container-consumos-totales{
-        display: flex;
-        break-inside: avoid;
-    }
-    #container-consumos-totales .col{
-        flex: 1;
-    }
-    
     
 }

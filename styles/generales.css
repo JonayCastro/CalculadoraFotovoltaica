@@ -18,6 +18,10 @@ body{
 	font-size: 1em;
 	box-sizing: border-box;
 }
+#main-container{
+	width: 95%;
+	margin: auto;
+}
 #container-header{
 	height: 200px;
 }
@@ -48,8 +52,17 @@ body{
 	padding: 10px;
 	margin-top: 0;
 }
+#container-consumos-totales .col{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 .total-item{
-	margin-left: 10px;
+	background-color:var(--background-color-aside);
+	flex: 1;
+	margin: 10px;
+	text-align: center;
+	padding: 20px;
 }
 .container-section{
 	width: 100%;

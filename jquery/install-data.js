@@ -1,11 +1,3 @@
-    var dateProyect = 'Campo Vacío';
-    var proyectName = 'Campo Vacío';
-    var clientName = 'Campo Vacío';
-    var clientSecondName = 'Campo Vacío';
-    var dirClient = 'Campo Vacío';
-    var emailClient = 'Campo Vacío';
-    var tfnClient = 'Campo Vacío';
-    
     var tPonten = 0;
     var tConsum = 0;
     var tAc = 0;
@@ -416,40 +408,5 @@ $(document).ready(function(){
             $('#img-f-consum-inver').attr('src','imgs/f_invconecbat.png');
         }
         calculos();
-    }
-    /* registrar cambios en datos proyecto y contacto */
-    $(document).on('keyup change', '.clientDatIn', contacChange);
-    function contacChange(e){
-        let idTarget = e.target.id;
-        switch(idTarget){
-            case('in-date'):{
-                dateProyect = e.target.value;
-                break;
-            }
-            case('in-proyect-name'):{
-                proyectName = e.target.value;
-                break;
-            }
-            case('in-name'):{
-                clientName = e.target.value;
-                break;
-            }
-            case('in-ape'):{
-                clientSecondName = e.target.value;
-                break;
-            }
-            case('in-direc'):{
-                dirClient = e.target.value;
-                break;
-            }
-            case('in-email'):{
-                emailClient = e.target.value;
-                break;
-            }
-            case('in-tfn'):{
-                tfnClient = e.target.value;
-                break;
-            }
-        }
     }
 });
