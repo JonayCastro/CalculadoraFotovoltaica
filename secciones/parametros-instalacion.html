@@ -14,6 +14,16 @@
         <p class="total-item" ng-click="showSection('container-baterias-totales', 'Total Baterías')">Total <span id="tBatTotalValue">0</span></p>
     </fieldset>
     <fieldset>
+        <legend>Paneles</legend>
+        <p class="total-item" ng-click="showSection('container-panel-paralelo', 'Paneles en Paralelo')">Modelo <span id="panModel">Campo Vacío</span></p>
+        <p class="total-item" ng-click="showSection('container-potencia-pico', 'Potencia Pico')">Rendimiento (Dato Fabricante) <span id="rpPanFab">0</span></p>
+        <p class="total-item" ng-click="showSection('container-intensidad-general', 'Intensidad General')">Intensidad Cortocircuito (Dato Fabricante) <span id="int-corto">0</span> A</p>
+        <p class="total-item" ng-click="showSection('container-panel-serie', 'Paneles en Serie')">Tensión Nominal (Dato Fabricante) <span id="tenNomPan">12</span> V</p>
+        <p class="total-item" ng-click="showSection('container-panel-serie', 'Paneles en Serie')">Serie <span id="tPsValue">0</span></p>
+        <p class="total-item" ng-click="showSection('container-panel-paralelo', 'Paneles en Paralelo')">Paralelo <span id="tPpValue">0</span></p>
+        <p class="total-item" ng-click="showSection('container-paneles-paralelo', 'Paneles Totales')">Total <span id="tPanelValue">0</span></p>
+    </fieldset>
+    <fieldset>
         <legend>Generales</legend>
         <p class="total-item" ng-click="showSection('container-potencia-pico', 'Potencia Pico')">HSP <span id="tHspValue">4</span> horas</p>
         <p class="total-item" ng-click="showSection('container-rendimiento', 'Rendimiento')">Rendimiento Instalación <span id="tRValue">0</span></p>
@@ -21,6 +31,14 @@
         <p class="total-item" ng-click="showSection('container-capacidad-nominal-bat', 'Capacidad Nominal Baterías')">Temperatura media invierno </a><span id="tMedValue">20</span> ºC</p>
         <p class="total-item" ng-click="showSection('container-panel-serie', 'Paneles en Serie')">Tensión Nominal Sistema <span id="tTnsValue">12</span> V</p>
         <p class="total-item" ng-click="showSection('container-intensidad-general', 'Intensidad General')">Intensidad General <span id="tIntenGenValue">0</span> A</p>
+    </fieldset>
+    <fieldset>
+        <legend>Inversor</legend>
+        <p class="total-item" ng-click="showSection('container-intensidad-inversor', 'Intensidad Consumida por Inversor')">Modelo: <span id="invModel">Campo Vacío</span></p>
+        <p class="total-item" ng-click="showSection('container-intensidad-inversor', 'Intensidad Consumida por Inversor')">Tipo Conección: <span id="inv-conec">Conectado a Batería</span></p>
+        <p class="total-item" ng-click="showSection('container-intensidad-inversor', 'Intensidad Consumida por Inversor')">Intensidad Consumida <span id="iConInvValue">0</span></p>
+        <p class="total-item" ng-click="showSection('container-potencia-inversor', 'Potencia Inversor')">Potencia <span id="pInvValue">0</span> </p>
+        <p class="total-item" ng-click="showSection('container-potencia-inversor', 'Potencia Inversor')">Rendimiento <span id="rInvValue">0</span> </p>
     </fieldset>
     <fieldset>
         <legend>Potencia</legend>
@@ -36,27 +54,8 @@
         <p class="total-item" ng-click="openSection('energia')">Consumo CA <span id="tAcValue">0</span> Wh</p>
     </fieldset>
     <fieldset>
-        <legend>Paneles</legend>
-        <p class="total-item" ng-click="showSection('container-panel-paralelo', 'Paneles en Paralelo')">Modelo <span id="panModel">Campo Vacío</span></p>
-        <p class="total-item" ng-click="showSection('container-potencia-pico', 'Potencia Pico')">Rendimiento (Dato Fabricante) <span id="rpPanFab">0</span></p>
-        <p class="total-item" ng-click="showSection('container-intensidad-general', 'Intensidad General')">Intensidad Cortocircuito (Dato Fabricante) <span id="int-corto">0</span> A</p>
-        <p class="total-item" ng-click="showSection('container-panel-serie', 'Paneles en Serie')">Tensión Nominal (Dato Fabricante) <span id="tenNomPan">12</span> V</p>
-        <p class="total-item" ng-click="showSection('container-panel-serie', 'Paneles en Serie')">Serie <span id="tPsValue">0</span></p>
-        <p class="total-item" ng-click="showSection('container-panel-paralelo', 'Paneles en Paralelo')">Paralelo <span id="tPpValue">0</span></p>
-        <p class="total-item" ng-click="showSection('container-paneles-paralelo', 'Paneles Totales')">Total <span id="tPanelValue">0</span></p>
-    </fieldset>
-    <fieldset>
-        <legend>Inversor</legend>
-        <p class="total-item" ng-click="showSection('container-intensidad-inversor', 'Intensidad Consumida por Inversor')">Modelo: <span id="invModel">Campo Vacío</span></p>
-        <p class="total-item" ng-click="showSection('container-intensidad-inversor', 'Intensidad Consumida por Inversor')">Tipo Conección: <span id="inv-conec">Conectado a Batería</span></p>
-        <p class="total-item" ng-click="showSection('container-intensidad-inversor', 'Intensidad Consumida por Inversor')">Intensidad Consumida <span id="iConInvValue">0</span></p>
-        <p class="total-item" ng-click="showSection('container-potencia-inversor', 'Potencia Inversor')">Potencia <span id="pInvValue">0</span> </p>
-        <p class="total-item" ng-click="showSection('container-potencia-inversor', 'Potencia Inversor')">Rendimiento <span id="rInvValue">0</span> </p>
-    </fieldset>
-    <fieldset>
         <legend>Regulador</legend>
         <p class="total-item" ng-click="showSection('container-tension-regulador', 'Tensión Regulador')">Tensión <span id="tNomRegValue">12</span> V</p>
         <p class="total-item" ng-click="showSection('container-intensidad-regulador', 'Intensidad Regulador')">Intensidad <span id="iNomRegValue">12</span> A</p>
     </fieldset>
-    
 </div>
