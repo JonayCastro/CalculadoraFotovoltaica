@@ -5,38 +5,64 @@
 	<meta name="description" content="Con esta aplicación web podras realizar los calculos necesarios para una instalación fotovoltáica de autoconsumo"/>
 	<meta name="keywords" content="fotovoltaica, aislada, autoconsumo, instalación, eléctrica, placas solares"/>
 	<meta name="author" content="Jonay Zevenzui Castro Suárez"/>
-	<meta name="copyright" content="Propiedad de Jonay Zevenzui Castro Suárez"/>
+	<meta name="copyright" content="Jonay Zevenzui Castro Suárez"/>
 	<meta name="robots" content="index"/>
 	<title>Calculadora Fotovoltáica</title>
-	<!-- Icons -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<!-- Hojas de Estilo -->
-	<link rel="stylesheet" href="styles/generales.css">
-	<link rel="stylesheet" href="styles/install-data.css">
+	<!-- HOJAS DE ESTILO -->
+	<link rel="stylesheet" href="styles/index.css">
+	<link rel="stylesheet" href="styles/table.css">
 	<link rel="stylesheet" href="styles/media-querys.css">
+	<!-- FONTAWESOME -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<!-- Fuentes google -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<!-- AngularJS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
-	<script src="angular/controllers.js"></script>
+	<script src="angular/app.js"></script>
 	<!-- Jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="jquery/general.js"></script>
-	<script src="jquery/install-data.js"></script>
+	<script src="jquery/index-jquery.js"></script>
+	<script src="jquery/calculos-jquery.js"></script>
 </head>
-<body>
-	<div id="container-header" class="no-print">
-		<h1 id="principal-title">Calculadora Fotovoltáica</h1>
-		<div id="container-menu">
-			<button id="btn-ctrl-menu" class="btn">Menú</button>
-			<div id="menu" class="oculto">
-				<button id="bnt-expand" class="btn-menu btn">Cerrar todo</button>
-				<button id="btn-export" class="btn">Imprimir</button>
+<body  ng-controller="dataController">
+	
+    <div id="header" class="no-print">
+		<h1 id="header-title">Calculadora Fotovoltáica</h1>
+		<button id="print-btn" ng-click="printProyect()"><i class="fas fa-print accion-btn"></i></button>
+	</div>
+	<div id="main-container">
+		<div id="container-visible">
+			<div ng-include="'secciones/datos-proyect.html'"></div>
+			<div ng-include="'secciones/tabla-consumos.html'"></div>
+			<div id="container-parametros-instalacion" ng-include="'secciones/parametros-instalacion.html'"></div>
+			<div id="footer" class="no-print">
+				<p> <a href="mailto:zeven8540@gmail.com">Jonay Z. Castro Suárez </a><span>|</span> Copyright&#169; Junio 2020 Calculadora Fotovoltáica</p>
 			</div>
+    	</div>
+		<div id="container-oculto" class="no-print">
+			<div id="container-title-section">
+				<h2 id="title-section"></h2>
+				<button id="btn-hide-section" ng-click="hideSection()" title="Imprimir en PDF">X</button>
+			</div>
+			<div class="container-section no-print" ng-include="'secciones/energia-total.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/rendimiento.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/energia.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/potencia-pico.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/num-paneles-serie.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/num-paneles-paralelo.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/num-paneles-totales.html'"></div>
+			<div class="conatiner-section no-print" ng-include="'secciones/capacidad-util-bat.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/capacidad-nom-bat.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/capacidad-bat.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/numero-bat-serie.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/numero-bat-paralelo.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/numero-bat-totales.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/tension-regulador.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/intensidad-regulador.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/intensidad-general.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/intensidad-consumo-inversor.html'"></div>
+			<div class="container-section no-print" ng-include="'secciones/potencia-inversor.html'"></div>   
 		</div>
 	</div>
-	<main id="main-container">
-		<div id="container-principal" ng-include="'templates/home.html'"></div>
-	</main>
 </body>
 </html>

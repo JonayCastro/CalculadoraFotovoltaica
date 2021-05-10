@@ -1,14 +1,34 @@
+@media screen and (max-device-width:800px){
+
+    body{
+        font-size: 1.5em;
+    }
+    #header #print-btn,.btn-ctrl-rows{
+        width: 60px;
+        height: 60px;
+    }
+    #container-parametros, .summary-title, .seccion, .seccion input{
+        font-size: 2rem;
+    }
+    #tabla-consumos{
+        font-size: 1.5rem;
+    }
+    .formula{
+        transform: scale(2);
+    }
+}
+
 @media print
 {
     .only-print{
         display: block;
     }
-    .clientDatIn{
-        border:none;
-        font-size: 1.5rem;
+    .title-dark, .summary-title{
+        color: black;
+        background-color: white;
     }
-    .clientDatIn::placeholder{
-        opacity: 0;
+    #container-datos-cliente input{
+        border-bottom: 2px solid black;
     }
     .no-print, .fas{
         display: none;
@@ -23,13 +43,24 @@
     table, td, th{
         border: 1px solid black;
         border-collapse: collapse;
+        background-color: white;
     }
     #tabla-consumos .datosConsum::placeholder{
         opacity: 0;
     }
-    .container-datos-cliente{
+    #container-parametros-instalacion{
+        break-inside: avoid;
+    }
+    #container-parametros fieldset{
+        flex: 1;
+    }
+    .total-item{
+        background-color: white;
+    }
+    #container-datos-cliente{
         display: flex;
         justify-content: space-around;
+        break-inside: avoid;
     }
     
 }
