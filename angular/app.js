@@ -80,5 +80,15 @@ angular.module('angularApp',[])
             });
 
         }
-
+        var btnTop = document.getElementById('btn-top');
+        btnTop.addEventListener('click', ()=>{
+            document.documentElement.scrollTo({
+                top:0,
+                behavior: "smooth"
+            });
+        });
+        document.addEventListener('scroll', ()=>{
+            if(document.documentElement.scrollTop >= 250) btnTop.style.opacity = 1;
+            else btnTop.style.opacity = 0;
+        });
     }]);
