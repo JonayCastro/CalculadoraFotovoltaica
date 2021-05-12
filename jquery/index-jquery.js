@@ -1,10 +1,20 @@
 $(document).ready(function(){
-    $(document).on('click', '#in-date', function(){
-        let today = new Date().toISOString().substr(0,10);
-        $(this).val(today);
-    })
+    
+    
+    $(document).on('click', '#in-date', setDate);
 
-    $(document).on('click', '#btn-export', function(){
+    function setDate(){
+        let today = new Date().toISOString().substr(0,10);
+        $('#in-date').val(today);
+    }
+
+    $(document).on('click', '#print-btn', function(){
+        let slideSections = Array.from(document.getElementsByClassName('slide-seccion'));
+        slideSections.forEach(element => {
+            element.open = true;
+        });
+        let inDate = document.getElementById('in-date');
+        if(inDate.value === '') setDate();
         window.print();
     });
 

@@ -73,17 +73,6 @@ angular.module('angularApp',[])
             },3000);
         }
 
-        s.printProyect = ()=>{
-            let slideSections = Array.from(document.getElementsByClassName('slide-seccion'));
-            slideSections.forEach(element => {
-                element.open = true;
-            });
-            window.print();
-            slideSections.forEach(element => {
-                element.open = false;
-            });
-
-        }
         var btnTop = document.getElementById('btn-top');
         btnTop.addEventListener('click', ()=>{
             document.documentElement.scrollTo({

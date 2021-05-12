@@ -27,7 +27,7 @@
         color: black;
         background-color: white;
     }
-    #container-datos-cliente input{
+    #container-datos-cliente .clientDatIn{
         border-bottom: 2px solid black;
     }
     .no-print, .fas{
@@ -46,6 +46,10 @@
         background-color: white;
     }
     #tabla-consumos .datosConsum::placeholder{
+        opacity: 0;
+        
+    }
+    #container-datos-cliente .clientDatIn::placeholder{
         opacity: 0;
     }
     #container-parametros-instalacion{
