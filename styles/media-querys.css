@@ -55,9 +55,6 @@
     #container-parametros-instalacion{
         break-inside: avoid;
     }
-    #container-parametros fieldset{
-        flex: 1;
-    }
     .total-item{
         background-color: white;
     }
