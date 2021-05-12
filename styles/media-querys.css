@@ -3,12 +3,13 @@
     body{
         font-size: 1.5em;
     }
-    #header #print-btn,.btn-ctrl-rows, #btn-top{
-        width: 60px;
-        height: 60px;
+    #header #print-btn,.btn-ctrl-rows, #btn-top, #btn-reset-clientDatIn{
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
     }
     #container-parametros, .summary-title, .seccion, .seccion input, #container-datos-cliente .clientDatIn{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     #tabla-consumos{
         font-size: 1.5rem;
@@ -63,5 +64,6 @@
         justify-content: space-around;
         break-inside: avoid;
     }
+    
     
 }

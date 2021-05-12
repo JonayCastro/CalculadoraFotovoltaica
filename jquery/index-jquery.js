@@ -1,6 +1,5 @@
 $(document).ready(function(){
     
-    
     $(document).on('click', '#in-date', setDate);
 
     function setDate(){
@@ -8,13 +7,17 @@ $(document).ready(function(){
         $('#in-date').val(today);
     }
 
-    $(document).on('click', '#print-btn', function(){
+    $(window).on('beforeprint', ()=>{
+        console.log('before');
         let slideSections = Array.from(document.getElementsByClassName('slide-seccion'));
         slideSections.forEach(element => {
             element.open = true;
         });
         let inDate = document.getElementById('in-date');
         if(inDate.value === '') setDate();
+    });
+
+    $(document).on('click', '#print-btn', function(){
         window.print();
     });
 
