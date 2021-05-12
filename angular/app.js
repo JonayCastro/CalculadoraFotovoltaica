@@ -33,25 +33,29 @@ angular.module('angularApp',[])
             }
         }
         var section;
-        var containerHide;
-        var titleSection;
+        var containerHide = document.getElementById('container-oculto');
+        var titleSection = document.getElementById('title-section');
         s.showSection = (idSection, titulo)=>{
-            containerHide = document.getElementById('container-oculto');
             section = document.getElementById(idSection);
-            titleSection = document.getElementById('title-section');
             titleSection.textContent = titulo;
             section.style.display = 'block';
             section.style.pointerEvents = 'auto';
             containerHide.style.opacity = 1;
             containerHide.style.pointerEvents = 'auto'
         }
-
-        s.hideSection = ()=>{
-            titleSection.textContent = '';
-            section.style.display = 'none';
-            section.style.pointerEvents = 'none';
-            containerHide.style.opacity = 0;
-            containerHide.style.pointerEvents = 'none'
+        var textContainer = document.getElementById('container-title-section');
+        s.hideSection = (e)=>{
+            let idTarget  = e.target.id;
+            
+            textContainer.style.pointerEvents = 'none';
+            if(idTarget === 'container-oculto'){
+                titleSection.textContent = '';
+                section.style.display = 'none';
+                section.style.pointerEvents = 'none';
+                containerHide.style.opacity = 0;
+                containerHide.style.pointerEvents = 'none'
+            }
+            
         }
 
         s.openSection = (cell)=>{
@@ -88,7 +92,7 @@ angular.module('angularApp',[])
             });
         });
         document.addEventListener('scroll', ()=>{
-            if(document.documentElement.scrollTop >= 250) btnTop.style.opacity = 1;
+            if(document.documentElement.scrollTop >= 150) btnTop.style.opacity = 1;
             else btnTop.style.opacity = 0;
         });
     }]);

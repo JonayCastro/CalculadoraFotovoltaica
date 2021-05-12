@@ -40,10 +40,9 @@
 				<p> <a href="mailto:zeven8540@gmail.com">Jonay Z. Castro Suárez </a><span>|</span> Copyright&#169; Junio 2020 Calculadora Fotovoltáica</p>
 			</div>
     	</div>
-		<div id="container-oculto" class="no-print">
+		<div id="container-oculto" class="no-print" ng-click="hideSection($event)">
 			<div id="container-title-section">
 				<h2 id="title-section"></h2>
-				<button id="btn-hide-section" ng-click="hideSection()" title="Imprimir en PDF">X</button>
 			</div>
 			<div class="container-section no-print" ng-include="'secciones/energia-total.html'"></div>
 			<div class="container-section no-print" ng-include="'secciones/rendimiento.html'"></div>

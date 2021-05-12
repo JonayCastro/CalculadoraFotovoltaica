@@ -21,7 +21,7 @@ $(document).ready(function(){
         tr.innerHTML = html;
         
         $('#body-table').append(tr);
-        $('#consum-row-'+rows).hide().fadeIn(200);
+        $('#consum-row-'+rows).hide().fadeIn(500);
         
         /* $('#body-table').append(('<tr class="table-consum-row" id="consum-row-'+rows+'">'+html+'</tr>')); */
     });
