@@ -33,7 +33,7 @@ $(document).ready(function(){
         tr.id = 'consum-row-'+rows;
         tr.innerHTML = html;
         
-        $('#body-table').append(tr);
+        $('#body-table').prepend(tr);
         $('#consum-row-'+rows).hide().fadeIn(500);
         
         /* $('#body-table').append(('<tr class="table-consum-row" id="consum-row-'+rows+'">'+html+'</tr>')); */
@@ -42,7 +42,10 @@ $(document).ready(function(){
     /* funcion para eleminiar filas de la tabla de consumos */
     $(document).on('click','#del-row', function(){
         if(rows>1){
-            $('#body-table tr:last').remove();
+            /* $('#body-table tr:last').remove(); */
+            $('#body-table tr').first().fadeOut(400, ()=>{
+                $('#body-table tr').first().remove();
+            });
             calculos();
             rows--;
         }
