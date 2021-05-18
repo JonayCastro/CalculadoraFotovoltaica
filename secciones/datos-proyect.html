@@ -2,27 +2,33 @@
     <summary class="summary-title">Datos del Proyecto</summary>
     <div id="container-datos-cliente">
         <form action="" id="form-datos-cliente">
-            <label for="dateProyect" class="only-print">Fecha</label>
-            <input type="date" class="clientDatIn" name="dateProyect" id="in-date" placeholder="Fecha">
+            <fieldset class="field-client-data" id="field-date">
+                <legend>Proyecto</legend>
+                
+                <label for="nameProyect" class="only-print">Nombre</label>
+                <input type="text" class="clientDatIn" name="nameProyect" id="in-proyect-name" placeholder="Nombre">
+                
+                <label for="dateProyect">Fecha</label>
+                <input type="date" class="clientDatIn" name="dateProyect" id="in-date">
+            </fieldset>
+            <fieldset class="field-client-data" id="field-client">
+                <legend>Datos del Cliente</legend>
+                
+                <label for="nameCliente" class="only-print">Nombre</label>
+                <input type="text" class="clientDatIn" name="nameCliente" id="in-name" placeholder="Nombre">
+                
+                <label for="apeCliente" class="only-print">Apellidos</label>
+                <input type="text" class="clientDatIn" name="apeCliente" id="in-ape" placeholder="Apellidos">
             
-            <label for="nameProyect" class="only-print">Nombre del Proyecto</label>
-            <input type="text" class="clientDatIn" name="nameProyect" id="in-proyect-name" placeholder="Nombre del Proyecto">
-            
-            <label for="nameCliente" class="only-print">Nombre del Cliente</label>
-            <input type="text" class="clientDatIn" name="nameCliente" id="in-name" placeholder="Nombre del Cliente">
-            
-            <label for="apeCliente" class="only-print">Apellidos</label>
-            <input type="text" class="clientDatIn" name="apeCliente" id="in-ape" placeholder="Apellidos del Cliente">
-        
-            <label for="direcCliente" class="only-print">Dirección</label>
-            <input type="text" class="clientDatIn" name="direcCliente" id="in-direc" placeholder="Dirección del Cliente">
-            
-            <label for="emailCliente" class="only-print">Email</label>
-            <input type="email" class="clientDatIn" name="emailCliente" id="in-email" placeholder="Email del Cliente">
-            
-            <label for="tfnCliente" class="only-print">Teléfono</label>
-            <input type="tel" class="clientDatIn" name="tfnCliente" id="in-tfn" placeholder="Teléfono del Cliente">
-
+                <label for="direcCliente" class="only-print">Dirección</label>
+                <input type="text" class="clientDatIn" name="direcCliente" id="in-direc" placeholder="Dirección">
+                
+                <label for="emailCliente" class="only-print">Email</label>
+                <input type="email" class="clientDatIn" name="emailCliente" id="in-email" placeholder="Email">
+                
+                <label for="tfnCliente" class="only-print">Teléfono</label>
+                <input type="tel" class="clientDatIn" name="tfnCliente" id="in-tfn" placeholder="Teléfono">
+            </fieldset>
             <button id="btn-reset-clientDatIn" type="reset" value="Limpiar" class="no-print"><i class="fas fa-trash-alt"></i></button>
         </form>
     </div>

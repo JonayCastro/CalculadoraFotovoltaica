@@ -3,13 +3,21 @@
     body{
         font-size: 1.5em;
     }
-    #header #print-btn,.btn-ctrl-rows, #btn-top, #btn-reset-clientDatIn{
+    #header #print-btn, #btn-top, #btn-reset-clientDatIn{
         width: 100px;
         height: 100px;
         font-size: 2.5rem;
     }
+    .btn-ctrl-rows{
+        width: 12vw;
+        height: 80px;
+        font-size: 2.5rem;
+    }
     #container-parametros, .summary-title, .seccion, .seccion input, #container-datos-cliente .clientDatIn{
         font-size: 2.5rem;
+    }
+    #field-table-ctrl{
+        width: 25vw;
     }
     #tabla-consumos{
         font-size: 1.5rem;
@@ -60,10 +68,6 @@
         background-color: white;
     }
     #container-datos-cliente{
-        display: flex;
-        justify-content: space-around;
         break-inside: avoid;
     }
-    
-    
 }

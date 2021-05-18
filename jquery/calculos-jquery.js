@@ -52,9 +52,9 @@ var tnpValue = 12;
     
 var tempMed = 20;
     
-var panelModel = 'Campo Vacío';
-var batModel = 'Campo Vacío';
-var invModel = 'Campo Vacío';
+var panelModel = '"Campo Vacío"';
+var batModel = '"Campo Vacío"';
+var invModel = '"Campo Vacío"';
 
 function calculos(){
     tPonten = 0;
