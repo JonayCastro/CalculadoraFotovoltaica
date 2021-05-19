@@ -235,6 +235,7 @@ $(document).ready(function(){
     $(document).on('keyup change', '.pnp-item', pnpChange);
     function pnpChange(e){
         pnpValue = Number(e.target.value);
+        $('#pPicoPanelValue').text(pnpValue);
         calculos();
     }
     
@@ -371,6 +372,7 @@ $(document).ready(function(){
             .val('')
             .on('keyup change', function(){
                 rpValue = Number($(this).val());
+                $('#rpPanFab').text(rpValue);
                 calculos();
             });
         }
